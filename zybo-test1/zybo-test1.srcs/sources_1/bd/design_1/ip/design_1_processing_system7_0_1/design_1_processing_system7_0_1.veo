@@ -54,7 +54,7 @@
 // (in parentheses) to your own signal names.
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
-design_1_processing_system7_0_0 your_instance_name (
+design_1_processing_system7_0_1 your_instance_name (
   .I2C0_SDA_I(I2C0_SDA_I),                    // input wire I2C0_SDA_I
   .I2C0_SDA_O(I2C0_SDA_O),                    // output wire I2C0_SDA_O
   .I2C0_SDA_T(I2C0_SDA_T),                    // output wire I2C0_SDA_T
@@ -65,8 +65,45 @@ design_1_processing_system7_0_0 your_instance_name (
   .USB0_PORT_INDCTL(USB0_PORT_INDCTL),        // output wire [1 : 0] USB0_PORT_INDCTL
   .USB0_VBUS_PWRSELECT(USB0_VBUS_PWRSELECT),  // output wire USB0_VBUS_PWRSELECT
   .USB0_VBUS_PWRFAULT(USB0_VBUS_PWRFAULT),    // input wire USB0_VBUS_PWRFAULT
-  .IRQ_P2F_ENET0(IRQ_P2F_ENET0),              // output wire IRQ_P2F_ENET0
-  .IRQ_P2F_ENET_WAKE0(IRQ_P2F_ENET_WAKE0),    // output wire IRQ_P2F_ENET_WAKE0
+  .M_AXI_GP0_ARVALID(M_AXI_GP0_ARVALID),      // output wire M_AXI_GP0_ARVALID
+  .M_AXI_GP0_AWVALID(M_AXI_GP0_AWVALID),      // output wire M_AXI_GP0_AWVALID
+  .M_AXI_GP0_BREADY(M_AXI_GP0_BREADY),        // output wire M_AXI_GP0_BREADY
+  .M_AXI_GP0_RREADY(M_AXI_GP0_RREADY),        // output wire M_AXI_GP0_RREADY
+  .M_AXI_GP0_WLAST(M_AXI_GP0_WLAST),          // output wire M_AXI_GP0_WLAST
+  .M_AXI_GP0_WVALID(M_AXI_GP0_WVALID),        // output wire M_AXI_GP0_WVALID
+  .M_AXI_GP0_ARID(M_AXI_GP0_ARID),            // output wire [11 : 0] M_AXI_GP0_ARID
+  .M_AXI_GP0_AWID(M_AXI_GP0_AWID),            // output wire [11 : 0] M_AXI_GP0_AWID
+  .M_AXI_GP0_WID(M_AXI_GP0_WID),              // output wire [11 : 0] M_AXI_GP0_WID
+  .M_AXI_GP0_ARBURST(M_AXI_GP0_ARBURST),      // output wire [1 : 0] M_AXI_GP0_ARBURST
+  .M_AXI_GP0_ARLOCK(M_AXI_GP0_ARLOCK),        // output wire [1 : 0] M_AXI_GP0_ARLOCK
+  .M_AXI_GP0_ARSIZE(M_AXI_GP0_ARSIZE),        // output wire [2 : 0] M_AXI_GP0_ARSIZE
+  .M_AXI_GP0_AWBURST(M_AXI_GP0_AWBURST),      // output wire [1 : 0] M_AXI_GP0_AWBURST
+  .M_AXI_GP0_AWLOCK(M_AXI_GP0_AWLOCK),        // output wire [1 : 0] M_AXI_GP0_AWLOCK
+  .M_AXI_GP0_AWSIZE(M_AXI_GP0_AWSIZE),        // output wire [2 : 0] M_AXI_GP0_AWSIZE
+  .M_AXI_GP0_ARPROT(M_AXI_GP0_ARPROT),        // output wire [2 : 0] M_AXI_GP0_ARPROT
+  .M_AXI_GP0_AWPROT(M_AXI_GP0_AWPROT),        // output wire [2 : 0] M_AXI_GP0_AWPROT
+  .M_AXI_GP0_ARADDR(M_AXI_GP0_ARADDR),        // output wire [31 : 0] M_AXI_GP0_ARADDR
+  .M_AXI_GP0_AWADDR(M_AXI_GP0_AWADDR),        // output wire [31 : 0] M_AXI_GP0_AWADDR
+  .M_AXI_GP0_WDATA(M_AXI_GP0_WDATA),          // output wire [31 : 0] M_AXI_GP0_WDATA
+  .M_AXI_GP0_ARCACHE(M_AXI_GP0_ARCACHE),      // output wire [3 : 0] M_AXI_GP0_ARCACHE
+  .M_AXI_GP0_ARLEN(M_AXI_GP0_ARLEN),          // output wire [3 : 0] M_AXI_GP0_ARLEN
+  .M_AXI_GP0_ARQOS(M_AXI_GP0_ARQOS),          // output wire [3 : 0] M_AXI_GP0_ARQOS
+  .M_AXI_GP0_AWCACHE(M_AXI_GP0_AWCACHE),      // output wire [3 : 0] M_AXI_GP0_AWCACHE
+  .M_AXI_GP0_AWLEN(M_AXI_GP0_AWLEN),          // output wire [3 : 0] M_AXI_GP0_AWLEN
+  .M_AXI_GP0_AWQOS(M_AXI_GP0_AWQOS),          // output wire [3 : 0] M_AXI_GP0_AWQOS
+  .M_AXI_GP0_WSTRB(M_AXI_GP0_WSTRB),          // output wire [3 : 0] M_AXI_GP0_WSTRB
+  .M_AXI_GP0_ACLK(M_AXI_GP0_ACLK),            // input wire M_AXI_GP0_ACLK
+  .M_AXI_GP0_ARREADY(M_AXI_GP0_ARREADY),      // input wire M_AXI_GP0_ARREADY
+  .M_AXI_GP0_AWREADY(M_AXI_GP0_AWREADY),      // input wire M_AXI_GP0_AWREADY
+  .M_AXI_GP0_BVALID(M_AXI_GP0_BVALID),        // input wire M_AXI_GP0_BVALID
+  .M_AXI_GP0_RLAST(M_AXI_GP0_RLAST),          // input wire M_AXI_GP0_RLAST
+  .M_AXI_GP0_RVALID(M_AXI_GP0_RVALID),        // input wire M_AXI_GP0_RVALID
+  .M_AXI_GP0_WREADY(M_AXI_GP0_WREADY),        // input wire M_AXI_GP0_WREADY
+  .M_AXI_GP0_BID(M_AXI_GP0_BID),              // input wire [11 : 0] M_AXI_GP0_BID
+  .M_AXI_GP0_RID(M_AXI_GP0_RID),              // input wire [11 : 0] M_AXI_GP0_RID
+  .M_AXI_GP0_BRESP(M_AXI_GP0_BRESP),          // input wire [1 : 0] M_AXI_GP0_BRESP
+  .M_AXI_GP0_RRESP(M_AXI_GP0_RRESP),          // input wire [1 : 0] M_AXI_GP0_RRESP
+  .M_AXI_GP0_RDATA(M_AXI_GP0_RDATA),          // input wire [31 : 0] M_AXI_GP0_RDATA
   .FCLK_CLK0(FCLK_CLK0),                      // output wire FCLK_CLK0
   .FCLK_RESET0_N(FCLK_RESET0_N),              // output wire FCLK_RESET0_N
   .MIO(MIO),                                  // inout wire [53 : 0] MIO
@@ -93,7 +130,7 @@ design_1_processing_system7_0_0 your_instance_name (
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 
-// You must compile the wrapper file design_1_processing_system7_0_0.v when simulating
-// the core, design_1_processing_system7_0_0. When compiling the wrapper file, be sure to
+// You must compile the wrapper file design_1_processing_system7_0_1.v when simulating
+// the core, design_1_processing_system7_0_1. When compiling the wrapper file, be sure to
 // reference the Verilog simulation library.
 

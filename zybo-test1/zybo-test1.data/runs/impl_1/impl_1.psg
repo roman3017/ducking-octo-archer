@@ -5,11 +5,12 @@
 	</StratHandle>
 	<Step Id="init_design">
 	</Step>
-	<Step Id="opt_design">
+	<Step Id="opt_design" EnableStepBool="0">
 	</Step>
 	<Step Id="power_opt_design">
 	</Step>
 	<Step Id="place_design">
+		<Option Id="NoDrc">1</Option>
 	</Step>
 	<Step Id="post_place_power_opt_design">
 	</Step>
